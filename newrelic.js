@@ -1,4 +1,7 @@
 "use strict";
+
+console.log("========> newrelic");
+
 /**
  * New Relic agent configuration.
  *
@@ -13,14 +16,14 @@ exports.config = {
   /**
    * Your New Relic license key.
    */
-  license_key: "NRJS-cc6d3c2ba3c39f6be79",
+  license_key: "f45b176d40aece2f209579c4a4579fbcFFFFNRAL",
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
      * issues with the agent, 'info' and higher will impose the least overhead on
      * production applications.
      */
-    level: "debug",
+    level: "info",
   },
   application_logging: {
     forwarding: {
