@@ -5,6 +5,10 @@ import newrelic from "newrelic";
 export default async function ErrorPage({ searchParams }) {
   const { q } = await searchParams;
 
+  if (q === "type-error") {
+    throw new TypeError("Type error occurred");
+  }
+
   if (q === "custom") {
     newrelic.noticeError(new Error("sdlkfj errror"), {
       custom: "value",
