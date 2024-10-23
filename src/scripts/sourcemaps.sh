@@ -49,8 +49,8 @@ find $NEXT_DIR -type f -name "*.js.map" | while read file; do
     curl -H "Api-Key: $NEW_RELIC_USER_API_KEY" \
         -F "sourcemap=@$withMapFile" \
         -F "javascriptUrl=$jsurl" \
-        -F "releaseId=YOUR_RELEASE_ID" \
-        -F "releaseName=YOUR_UI_PAGE" \
+        -F "releaseId=YOUR_RELEASE_ID1" \
+        -F "releaseName=YOUR_UI_PAGE1" \
         https://sourcemaps.service.newrelic.com/v2/applications/$NEW_RELIC_APP_ID/sourcemaps
 done
 
